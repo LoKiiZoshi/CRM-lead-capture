@@ -1,12 +1,21 @@
-# URL patterns for leads app
 from django.urls import path
-from . import views
-from .forms import LeadFormView
 
-app_name = 'leads'
+from leads import views
+from .import views
+
+app_name = "api_leads"
 
 urlpatterns = [
-    path('api/leads/', views.LeadCreateAPIView.as_view(), name='lead-create'),  # API for form leads
-    path('api/leads/email/', views.EmailLeadCreateAPIView.as_view(), name='email-lead-create'),  # API for email leads
-    path('form/', LeadFormView.as_view(), name='lead-form'),  # Server-rendered form
+    path(
+        "create-from-site/",
+        views.CreateLeadFromSite.as_view(),
+        name="create_lead_from_site",
+    ),
+    path("", views.LeadListView.as_view()),
+    path("<str:pk>/", views.LeadDetailView.as_view()),
+    path("upload/", views.LeadUploadView.as_view()),
+    path("comment/<str:pk>/", views.LeadCommentView.as_view()),
+    path("attachment/<str:pk>/", views.LeadAttachmentView.as_view()),
+    path("companies",views.CompaniesView.as_view()),
+    path('company/<str:pk>', views.CompanyDetail.as_view()),
 ]
