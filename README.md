@@ -1,19 +1,27 @@
 CRM-lead-capture/
 │
+
 ├── accounts/        # User authentication & account logic
+
 ├── crm_leads/       # CRM core functionality
+
 ├── leads/           # Lead capture & management
+
 │
 ├── db.sqlite3       # Database
+
 ├── manage.py        # Django management file
-├── requirements.txt
+
+├── requirements.txt'
+
 └── README.md
+
 Installation & Setup Guide
 
 Follow these steps to run the project locally.
 
 Clone the Repository
-git clone https://github.com/your-username/CRM-lead-capture.git
+git clone 
 cd CRM-lead-capture
 
 Create Virtual Environment
