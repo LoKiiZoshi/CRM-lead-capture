@@ -1,5 +1,5 @@
-CRM-lead-capture/
-│
+ProjectName* CRM-lead-capture
+
 
 ├── accounts/        # User authentication & account logic
 
@@ -7,7 +7,7 @@ CRM-lead-capture/
 
 ├── leads/           # Lead capture & management
 
-│
+
 ├── db.sqlite3       # Database
 
 ├── manage.py        # Django management file
